@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chech--vote age</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <marquee behavior="" direction="">
+            <h1> Age checking for vote</h1>
+        </marquee>
+        <div class="continer">
+            <h1>Enter your age </h1>
+            <input id="number" type="number">
+            <button id="btn" onclick="toggle()">submit</button>
+            <h2 id="text"> </h2>
+        </div>
+    </div>
+
+
+    <script>
+        const input = document.querySelector('#number');
+        // const button = document.querySelector('#btn');
+        const text = document.querySelector('#text');
+
+        function toggle() {
+            const number = parseInt(input.value);
+            if (number >= 18) {
+                text.innerHTML = 'you can vote'
+                text.style.color = 'green';
+            } else {
+                text.innerHTML = 'अभी तुम बच्चे हो!'
+                text.style.color = 'red';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
